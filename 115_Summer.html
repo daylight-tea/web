@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鷺江國小114年夏日樂學【創意科技探險營】報名表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', "Microsoft JhengHei", sans-serif;
+            background-color: #FDFCF0;
+        }
+        .grid-bg {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .form-input {
+            transition: all 0.2s ease-in-out;
+        }
+        .form-input:focus {
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        }
+        @keyframes bounce-in {
+            0% { transform: scale(0.9); opacity: 0; }
+            70% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-success {
+            animation: bounce-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body class="min-h-screen py-6 md:py-12 px-4 relative overflow-x-hidden">
+    <!-- 背景紋理 -->
+    <div class="fixed inset-0 grid-bg opacity-30 pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+        
+        <header class="relative mb-8 text-center bg-white p-6 md:p-10 rounded-[2.5rem] border-4 border-blue-500 shadow-[10px_10px_0_rgba(59,130,246,0.1)]">
+            <div class="absolute top-6 left-6 text-blue-400 opacity-20 transform -rotate-12 hidden md:block">
+                <i data-lucide="hammer" size="48"></i>
+            </div>
+            <div class="absolute bottom-6 right-6 text-amber-400 opacity-20 transform rotate-12 hidden md:block">
+                <i data-lucide="lightbulb" size="48"></i>
+            </div>
+            
+            <div class="inline-block bg-amber-100 text-amber-700 px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-4 tracking-widest border border-amber-200">
+                LUJING ELEMENTARY 114 SUMMER
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black text-blue-900 mb-4 flex flex-wrap justify-center items-center gap-3">
+                <span>創意科技</span>
+                <span class="bg-yellow-300 px-4 py-1 rounded-2xl transform -rotate-2 inline-block">探險營</span>
+                <span>報名表</span>
+            </h1>
+            <p class="text-slate-500 font-medium italic underline decoration-blue-200 decoration-4 underline-offset-8">Maker Adventure Camp Guide</p>
+        </header>
+
+        <section class="bg-white rounded-3xl p-6 md:p-8 mb-8 border-2 border-slate-200 shadow-sm overflow-hidden">
+            <div class="flex items-center gap-3 mb-8 text-blue-600 font-bold border-b-2 border-blue-100 pb-4">
+                <i data-lucide="info" class="w-6 h-6"></i>
+                <h3 class="text-xl md:text-2xl">營隊探險指南 (重要說明)</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 1. 營隊日期 -->
+                <div class="flex items-start gap-4 p-5 bg-blue-50 rounded-2xl border border-blue-100 transition-hover hover:shadow-md">
+                    <i data-lucide="calendar" class="text-blue-500 shrink-0"></i>
+                    <div>
+                        <p class="font-bold text-blue-900 text-lg mb-1">1. 營隊日期</p>
+                        <p class="text-slate-700 font-medium">114/7/6 ～ 114/7/17</p>
+                        <p class="text-slate-500 text-sm">(週一至週五，共 10 天)</p>
+                        <div class="mt-3 p-3 bg-white rounded-xl border-2 border-red-200 inline-block">
+                            <p class="text-red-600 font-black flex items-center gap-2">
+                                <i data-lucide="clock" class="w-4 h-4"></i> 下午 12:40 ～ 16:40
+                            </p>
+                            <p class="text-red-400 text-xs mt-1 font-bold italic">*營隊活動時間為下午，請注意！*</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 活動內容 -->
+                <div class="flex items-start gap-4 p-5 bg-amber-50 rounded-2xl border border-amber-100">
+                    <i data-lucide="wrench" class="text-amber-500 shrink-0"></i>
+                    <div>
+                        <p class="font-bold text-amber-900 text-lg mb-1">2. 活動內容</p>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            認識科學原理，學習使用不同工具並實作，將所學知識與生活結合，體驗創客手作魅力。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3. 地點 & 4. 對象 -->
+                <div class="flex items-start gap-4 p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                    <i data-lucide="map-pin" class="text-emerald-500 shrink-0"></i>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-emerald-900 text-lg mb-1">3. 活動地點</p>
+                            <p class="text-slate-700 font-bold">鷺江國小</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-emerald-900 text-lg mb-1">4. 參加對象</p>
+                            <p class="text-slate-700">本校三、四年級學生</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. 招生 & 6. 費用 -->
+                <div class="flex items-start gap-4 p-5 bg-purple-50 rounded-2xl border border-purple-100">
+                    <i data-lucide="users" class="text-purple-500 shrink-0"></i>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-purple-900 text-lg mb-1">5. 招生人數</p>
+                            <p class="text-slate-700 text-sm">16人 (超額採抽籤決定錄取資格)</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-purple-900 text-lg mb-1">6. 報名費用</p>
+                            <p class="text-emerald-600 font-black text-lg">● 全部免費</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. 時間 & 9. 公告 -->
+                <div class="flex items-start gap-4 p-5 bg-indigo-50 rounded-2xl border border-indigo-100">
+                    <i data-lucide="bell" class="text-indigo-500 shrink-0"></i>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-indigo-900 text-lg mb-1">7. 報名截止</p>
+                            <p class="text-slate-700">114/6/12 (四) 下午 12:00 止</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-indigo-900 text-lg mb-1">9. 錄取公告</p>
+                            <p class="text-slate-700 text-sm">預計 114/6/15 前透過 Email 通知</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. 注意事項 -->
+                <div class="flex items-start gap-4 p-5 bg-red-50 rounded-2xl border border-red-100">
+                    <i data-lucide="alert-triangle" class="text-red-500 shrink-0"></i>
+                    <div>
+                        <p class="font-bold text-red-900 text-lg mb-1">8. 注意事項</p>
+                        <p class="text-red-700 text-sm font-medium leading-relaxed">
+                            錄取後未全程參與者，將影響後續相關活動參加機會。包含科學實作、工具使用。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main id="formContainer" class="bg-white rounded-[2.5rem] shadow-xl border-4 border-slate-100 overflow-hidden relative">
+            <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-blue-400 via-yellow-400 to-emerald-400"></div>
+            
+            <form id="registrationForm" class="p-6 md:p-12 space-y-10">
+                
+                <!-- 第一步：學生資料 -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-blue-100 rounded-2xl text-blue-600">
+                            <i data-lucide="user"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800">第一步：填寫探險員資料</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-500 ml-1">學生姓名</label>
+                            <input 
+                                required
+                                type="text"
+                                id="studentName"
+                                placeholder="請輸入學生全名"
+                                class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-blue-500 rounded-2xl px-5 py-4 outline-none font-medium"
+                            >
+                        </div>
+                        
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-500 ml-1">年級</label>
+                                <select 
+                                    id="grade"
+                                    class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-blue-400 rounded-2xl px-2 py-4 outline-none font-bold text-blue-600 cursor-pointer appearance-none text-center"
+                                >
+                                    <option value="3">3年</option>
+                                    <option value="4">4年</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-500 ml-1">班級</label>
+                                <input 
+                                    required
+                                    type="number"
+                                    id="className"
+                                    placeholder="班"
+                                    class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-blue-400 rounded-2xl px-2 py-4 outline-none text-center font-bold"
+                                >
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-500 ml-1">座號</label>
+                                <input 
+                                    required
+                                    type="number"
+                                    id="seatNumber"
+                                    placeholder="號"
+                                    class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-blue-400 rounded-2xl px-2 py-4 outline-none text-center font-bold"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 第二步：家長聯絡資料 -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="p-3 bg-yellow-100 rounded-2xl text-yellow-600">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-800">第二步：聯繫補給站</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-500 ml-1">家長姓名</label>
+                            <input 
+                                required
+                                type="text"
+                                id="parentName"
+                                placeholder="方便聯絡的家長姓名"
+                                class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-yellow-500 rounded-2xl px-5 py-4 outline-none font-medium"
+                            >
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-slate-500 ml-1">手機號碼</label>
+                            <input 
+                                required
+                                type="tel"
+                                id="contactPhone"
+                                placeholder="09xx-xxx-xxx"
+                                class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-yellow-500 rounded-2xl px-5 py-4 outline-none font-medium"
+                            >
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-500 ml-1 flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i> 通知寄送 Email
+                        </label>
+                        <input 
+                            required
+                            type="email"
+                            id="email"
+                            placeholder="錄取公告將寄送至此電子郵件"
+                            class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-yellow-500 rounded-2xl px-5 py-4 outline-none font-medium"
+                        >
+                    </div>
+                </div>
+
+                <!-- 送出按鈕 -->
+                <div class="pt-6">
+                    <button 
+                        type="submit"
+                        id="submitBtn"
+                        class="w-full group relative flex items-center justify-center gap-4 py-6 rounded-[2rem] bg-blue-500 text-white font-black text-2xl tracking-widest transition-all shadow-[0_8px_0_rgb(30,64,175)] hover:shadow-[0_4px_0_rgb(30,64,175)] hover:translate-y-1 active:translate-y-2 active:shadow-none"
+                    >
+                        <span>發射報名表</span>
+                        <i data-lucide="send" class="group-hover:translate-x-2 transition-transform"></i>
+                    </button>
+                    <p class="text-center text-slate-400 text-sm mt-6 font-medium">請確認資料填寫正確後再送出，謝謝您的配合！</p>
+                </div>
+            </form>
+
+            <!-- 成功訊息遮罩 (預設隱藏) -->
+            <div id="successOverlay" class="hidden absolute inset-0 bg-white z-20 flex flex-col items-center justify-center p-8 text-center animate-success">
+                <div class="bg-yellow-400 w-24 h-24 rounded-full flex items-center justify-center mb-6 shadow-lg transform rotate-12">
+                    <i data-lucide="rocket" class="text-blue-900 w-12 h-12"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-blue-900 mb-4">報名資料已成功送出！</h2>
+                <p class="text-blue-700 mb-10 font-medium text-lg leading-relaxed">
+                    我們已經收到您的報名申請，<br/>請於 6/15 留意 Email 錄取公告。
+                </p>
+                <button 
+                    onclick="resetForm()"
+                    class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-8 py-3 rounded-2xl font-bold transition-all"
+                >
+                    填寫另一份報名表
+                </button>
+            </div>
+        </main>
+
+        <!-- 頁尾資訊 -->
+        <footer class="mt-12 text-center pb-12">
+            <div class="flex justify-center gap-4 mb-8">
+                <span class="w-10 h-1.5 bg-blue-300 rounded-full"></span>
+                <span class="w-10 h-1.5 bg-yellow-300 rounded-full"></span>
+                <span class="w-10 h-1.5 bg-emerald-300 rounded-full"></span>
+            </div>
+            
+            <a href="mailto:daylight@apps.ntpc.edu.tw" class="inline-flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors font-bold bg-white px-8 py-3 rounded-full border border-slate-200 shadow-sm hover:shadow-md">
+                <i data-lucide="mail" class="w-5 h-5 text-blue-500"></i>
+                聯絡 Email：daylight@apps.ntpc.edu.tw
+            </a>
+
+            <p class="text-slate-400 text-xs font-bold mt-10 uppercase tracking-[0.2em]">
+                © 114 鷺江國小 創意科技探險營 | 科學 · 創客 · 探險
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // 初始化 Lucide 圖示
+        lucide.createIcons();
+
+        // Google 表單配置
+        const CONFIG = {
+            formUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeocMgp9b_emcOp2Rr32SB2BVwkZgte_OMNUakkCZ0UU_a8Qw/formResponse",
+            entries: {
+                studentName: "entry.1634984232",
+                classInfo: "entry.1960542066", // 五碼格式
+                parentName: "entry.2056621343",
+                email: "entry.1865514819",
+                contactPhone: "entry.879725069"
+            }
+        };
+
+        const form = document.getElementById('registrationForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const overlay = document.getElementById('successOverlay');
+
+        // 表單提交處理
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // 停用按鈕防止重複點擊
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>傳送中...</span><i class="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></i>`;
+
+            // 準備數據
+            const grade = document.getElementById('grade').value;
+            const cls = document.getElementById('className').value.padStart(2, '0');
+            const seat = document.getElementById('seatNumber').value.padStart(2, '0');
+            const classFullInfo = `${grade}${cls}${seat}`; // 例如 40101
+
+            const formData = new URLSearchParams();
+            formData.append(CONFIG.entries.studentName, document.getElementById('studentName').value);
+            formData.append(CONFIG.entries.classInfo, classFullInfo);
+            formData.append(CONFIG.entries.parentName, document.getElementById('parentName').value);
+            formData.append(CONFIG.entries.email, document.getElementById('email').value);
+            formData.append(CONFIG.entries.contactPhone, document.getElementById('contactPhone').value);
+
+            try {
+                // 使用 no-cors 模式發送到 Google Forms
+                await fetch(CONFIG.formUrl, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: formData.toString()
+                });
+                
+                // 成功後顯示遮罩
+                setTimeout(() => {
+                    overlay.classList.remove('hidden');
+                    window.scrollTo({ top: document.getElementById('formContainer').offsetTop - 20, behavior: 'smooth' });
+                }, 500);
+
+            } catch (err) {
+                console.error("Submission Error:", err);
+                alert("提交失敗，請檢查網路連線或稍後再試。");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>發射報名表</span><i data-lucide="send"></i>`;
+                lucide.createIcons();
+            }
+        });
+
+        // 重設表單
+        function resetForm() {
+            form.reset();
+            overlay.classList.add('hidden');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = `<span>發射報名表</span><i data-lucide="send"></i>`;
+            lucide.createIcons();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
