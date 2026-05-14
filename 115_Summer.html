@@ -305,6 +305,22 @@
                     我已確認，請關閉此網頁
                 </button>
             </div>
+
+            <!-- 報名截止遮罩 (當時間超過時顯示) -->
+            <div id="closedOverlay" class="hidden absolute inset-0 bg-slate-50 z-30 flex flex-col items-center justify-center p-8 text-center">
+                <div class="bg-slate-200 w-24 h-24 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                    <i data-lucide="calendar-off" class="text-slate-500 w-12 h-12"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">報名已經截止</h2>
+                <p class="text-slate-600 mb-8 font-medium text-lg leading-relaxed">
+                    本營隊報名時間已於 <br/>
+                    <span class="text-red-500 font-bold">115/6/3 (三) 中午 12:00</span> 結束。<br/>
+                    感謝您的關注，請留意後續公告。
+                </p>
+                <div class="p-4 bg-white border-2 border-slate-200 rounded-2xl">
+                    <p class="text-slate-500 text-sm">如有任何疑問，請來信洽詢：<br/>daylight@apps.ntpc.edu.tw</p>
+                </div>
+            </div>
         </main>
 
         <!-- 頁尾資訊 -->
@@ -329,6 +345,25 @@
     <script>
         // 初始化 Lucide 圖示
         lucide.createIcons();
+
+        // 截止時間：西元 2026年 (民國115年) 6月 3日 12:00:00
+        const DEADLINE = new Date(2026, 5, 3, 12, 0, 0); // 注意：JS 月份從 0 開始，5 代表 6 月
+
+        // 檢查是否過期
+        function checkDeadline() {
+            const now = new Date();
+            if (now > DEADLINE) {
+                document.getElementById('closedOverlay').classList.remove('hidden');
+                document.getElementById('registrationForm').classList.add('pointer-events-none', 'opacity-20');
+                // 停用提交按鈕
+                const btn = document.getElementById('submitBtn');
+                btn.disabled = true;
+                btn.innerText = "報名已截止";
+            }
+        }
+
+        // 頁面載入時執行檢查
+        window.addEventListener('load', checkDeadline);
 
         // Google 表單配置
         const CONFIG = {
