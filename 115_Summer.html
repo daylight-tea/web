@@ -101,8 +101,8 @@
                         </div>
                         <div>
                             <p class="font-bold text-emerald-900 text-lg mb-1">4. 參加對象</p>
-                            <p class="text-slate-700 text-sm">本校114學年三、四年級學生。</p>
-                            <p class="text-slate-500 text-xs">(暑假前三、四年級、暑假後四、五年級)</p>
+                            <p class="text-slate-700 text-sm">本校114學年四、五年級學生。</p>
+                            <p class="text-slate-500 text-xs">(暑假前四、五年級、暑假後五、六年級)</p>
                         </div>
                     </div>
                 </div>
@@ -202,8 +202,8 @@
                                     id="grade"
                                     class="form-input w-full bg-slate-50 border-2 border-slate-200 focus:border-blue-400 rounded-2xl px-2 py-4 outline-none font-bold text-blue-600 cursor-pointer appearance-none text-center"
                                 >
-                                    <option value="3">3年</option>
                                     <option value="4">4年</option>
+                                    <option value="5">5年</option>
                                 </select>
                             </div>
                             <div class="space-y-2">
@@ -299,10 +299,10 @@
                     我們已經收到您的報名申請，<br/>請於 6/8 前留意 Email 錄取公告。
                 </p>
                 <button 
-                    onclick="resetForm()"
-                    class="bg-slate-100 hover:bg-slate-200 text-slate-600 px-8 py-3 rounded-2xl font-bold transition-all"
+                    onclick="closePage()"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-black text-xl transition-all shadow-lg active:translate-y-1"
                 >
-                    填寫另一份報名表
+                    我已確認，請關閉此網頁
                 </button>
             </div>
         </main>
@@ -391,14 +391,17 @@
             }
         });
 
-        // 重設表單
-        function resetForm() {
-            form.reset();
-            overlay.classList.add('hidden');
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = `<span>發射報名表</span><i data-lucide="send"></i>`;
-            lucide.createIcons();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        // 關閉頁面
+        function closePage() {
+            // 嘗試關閉視窗
+            window.opener = null;
+            window.open('', '_self');
+            window.close();
+            
+            // 如果無法直接關閉（瀏覽器限制），則提示使用者
+            setTimeout(() => {
+                alert("若視窗未自動關閉，請直接手動關閉此分頁，謝謝您！");
+            }, 300);
         }
     </script>
 </body>
